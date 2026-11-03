@@ -15,7 +15,6 @@
             display: flex;
             align-items: center;
         }
-
         .tech-top-left {
             position: fixed;
             top: 10px;
@@ -26,7 +25,6 @@
             letter-spacing: 1px;
             pointer-events: none;
         }
-
         .tech-top-right {
             position: fixed;
             top: 10px;
@@ -37,12 +35,10 @@
             letter-spacing: 1px;
             pointer-events: none;
         }
-
         .main-content {
             padding-left: 20px;
             max-width: 600px;
         }
-
         .text-small {
             font-size: 14px;
             color: rgba(230, 237, 243, 0.6);
@@ -50,37 +46,43 @@
             text-transform: lowercase;
             letter-spacing: 1px;
         }
-
         .text-huge-bold {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 15px;
             letter-spacing: -1px;
         }
-
         .text-description {
             font-size: 16px;
             color: rgba(230, 237, 243, 0.8);
             line-height: 1.5;
             margin-bottom: 20px;
         }
-
         .social-links {
             font-size: 14px;
             color: rgba(230, 237, 243, 0.4);
             text-transform: lowercase;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
-
         .social-links a {
             color: rgba(230, 237, 243, 0.7);
             text-decoration: none;
             transition: color 0.2s;
         }
-
         .social-links a:hover {
             color: #e6edf3;
             text-decoration: underline;
+        }
+        .social-stack {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            line-height: 1.2;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -100,7 +102,13 @@
             small software developer, modder and system enthusiast from the internet. also a furry. be careful.
         </div>
         <div class="social-links">
-            <a href="https://github.com/b1no-gh" target="_blank">github</a> | <a href="https://discord.gg/wdt5Ke2Rs8" target="_blank">discord</a> | <a href="https://www.nexusmods.com/profile/b1noNexus" target="_blank">nexusmods</a> | <a href="https://steamcommunity.com/id/b1no-steam/" target="_blank">steam </a>
+            <a href="https://github.com/b1no-gh" target="_blank">github</a> | 
+            <span class="social-stack">
+                <a href="#" target="_blank">steam [1]</a>
+                <a href="#" target="_blank">steam [2]</a>
+            </span> | 
+            <a href="https://discord.gg/wdt5Ke2Rs8" target="_blank">discord</a> | 
+            <a href="https://www.nexusmods.com/profile/b1noNexus" target="_blank">nexusmods</a>
         </div>
     </div>
 
