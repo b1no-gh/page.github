@@ -22,18 +22,22 @@
             small software developer, modder and system enthusiast from the internet. also a furry. be careful.
         </div>
 
+        <!-- Кнопки управления (more | links) -->
         <div class="menu-bar">
             <span id="btn-more" class="menu-btn" onclick="toggleSection('more')">more</span>
             <span class="menu-divider">|</span>
             <span id="btn-links" class="menu-btn" onclick="toggleSection('links')">links</span>
         </div>
 
+        <!-- Выпадающий блок для "more" -->
         <div id="content-more" class="dropdown-section">
             <div class="dropdown-line"></div>
             <div class="dropdown-text">
+                здесь будет ваш подробный текст о вас, ваших проектах, увлечениях или кастомных штуках. этот блок может содержать сколько угодно строк, и он будет аккуратно переноситься по ширине экрана.
             </div>
         </div>
 
+        <!-- Выпадающий блок для "links" (вертикальный список) -->
         <div id="content-links" class="dropdown-section">
             <div class="dropdown-line"></div>
             <div class="social-links-vertical">
@@ -59,6 +63,7 @@
         updateLayout();
         window.addEventListener('resize', updateLayout);
 
+        // Функция переключения вкладок (more / links)
         function toggleSection(sectionName) {
             const moreContent = document.getElementById('content-more');
             const linksContent = document.getElementById('content-links');
@@ -67,22 +72,26 @@
 
             if (sectionName === 'more') {
                 const isOpen = moreContent.classList.contains('active');
+                // Закрываем всё
                 moreContent.classList.remove('active');
                 linksContent.classList.remove('active');
                 btnMore.classList.remove('active');
                 btnLinks.classList.remove('active');
                 
+                // Если было закрыто — открываем more
                 if (!isOpen) {
                     moreContent.classList.add('active');
                     btnMore.classList.add('active');
                 }
             } else if (sectionName === 'links') {
                 const isOpen = linksContent.classList.contains('active');
+                // Закрываем всё
                 moreContent.classList.remove('active');
                 linksContent.classList.remove('active');
                 btnMore.classList.remove('active');
                 btnLinks.classList.remove('active');
                 
+                // Если было закрыто — открываем links
                 if (!isOpen) {
                     linksContent.classList.add('active');
                     btnLinks.classList.add('active');
@@ -91,5 +100,4 @@
         }
     </script>
 </body>
-    </html>
-    
+</html>
