@@ -31,6 +31,7 @@ body {
     pointer-events: none;
 }
 
+/* Убрано ограничение max-width, добавлен правый отступ для симметрии */
 .main-content {
     padding-left: 20px;
     padding-right: 40px;
@@ -132,4 +133,4 @@ body {
 .social-links-vertical a:hover {
     color: #e6edf3;
     text-decoration: underline;
-                }
+}
