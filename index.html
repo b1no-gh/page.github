@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>b1no</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_2.css">
 </head>
 <body>
 
@@ -21,19 +21,31 @@
         <div class="text-description">
             small software developer, modder and system enthusiast from the internet. also a furry. be careful.
         </div>
-        <div class="social-links">
-            <a href="https://github.com/b1no-gh" target="_blank">github</a> | 
-            <a href="https://discord.gg/wdt5Ke2Rs8" target="_blank">discord</a> | 
-            <a href="https://www.nexusmods.com/profile/b1noNexus" target="_blank">nexusmods</a> | 
-            <span class="social-stack">
+
+        <div class="menu-bar">
+            <span id="btn-more" class="menu-btn" onclick="toggleSection('more')">more</span>
+            <span class="menu-divider">|</span>
+            <span id="btn-links" class="menu-btn" onclick="toggleSection('links')">links</span>
+        </div>
+
+        <div id="content-more" class="dropdown-section">
+            <div class="dropdown-line"></div>
+            <div class="dropdown-text">
+            </div>
+        </div>
+
+        <div id="content-links" class="dropdown-section">
+            <div class="dropdown-line"></div>
+            <div class="social-links-vertical">
+                <a href="https://github.com/b1no-gh" target="_blank">github</a>
+                <a href="https://discord.gg/wdt5Ke2Rs8" target="_blank">discord</a>
+                <a href="https://www.nexusmods.com/profile/b1noNexus" target="_blank">nexusmods</a>
                 <a href="https://steamcommunity.com/id/b1no-steam/" target="_blank">steam 1</a>
                 <a href="https://steamcommunity.com/id/on1b" target="_blank">steam 2</a>
-            </span> | 
-            <a href="https://x.com/b1no_x" target="_blank">twitter</a> | 
-            <a href="https://e621.net/users/1631801" target="_blank">e621</a> | 
-            <a href="https://www.furaffinity.net/user/kitanthedraconoid/" target=”_blank">furaffinity</a>
-            <!--<a href="#" target="_blank">spotify</a>
-            <a href="#" target="_blank">tiktok</a>-->
+                <a href="https://x.com/b1no_x" target="_blank">twitter</a>
+                <a href="https://e621.net/users/1631801" target="_blank">e621</a>
+                <a href="https://www.furaffinity.net/user/kitanthedraconoid/" target="_blank">furaffinity</a>
+            </div>
         </div>
     </div>
 
@@ -41,12 +53,43 @@
         function updateLayout() {
             const width = window.innerWidth;
             const sizeIndicator = document.getElementById('screen-size');
-            
             sizeIndicator.innerText = width + "px";
         }
         
         updateLayout();
         window.addEventListener('resize', updateLayout);
+
+        function toggleSection(sectionName) {
+            const moreContent = document.getElementById('content-more');
+            const linksContent = document.getElementById('content-links');
+            const btnMore = document.getElementById('btn-more');
+            const btnLinks = document.getElementById('btn-links');
+
+            if (sectionName === 'more') {
+                const isOpen = moreContent.classList.contains('active');
+                moreContent.classList.remove('active');
+                linksContent.classList.remove('active');
+                btnMore.classList.remove('active');
+                btnLinks.classList.remove('active');
+                
+                if (!isOpen) {
+                    moreContent.classList.add('active');
+                    btnMore.classList.add('active');
+                }
+            } else if (sectionName === 'links') {
+                const isOpen = linksContent.classList.contains('active');
+                moreContent.classList.remove('active');
+                linksContent.classList.remove('active');
+                btnMore.classList.remove('active');
+                btnLinks.classList.remove('active');
+                
+                if (!isOpen) {
+                    linksContent.classList.add('active');
+                    btnLinks.classList.add('active');
+                }
+            }
+        }
     </script>
 </body>
-</html>
+    </html>
+    
