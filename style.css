@@ -98,7 +98,8 @@ body {
 .dropdown-section {
     display: none;
     margin-top: 15px;
-    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dropdown-section.active {
@@ -116,8 +117,7 @@ body {
     font-size: 15px;
     color: rgba(230, 237, 243, 0.8);
     line-height: 1.5;
-    /* white-space: pre-line; */
-    overflow-wrap: break-word;
+    white-space: pre-line;
 }
 
 .social-links-vertical {
