@@ -31,7 +31,6 @@ body {
     pointer-events: none;
 }
 
-/* Убрано ограничение max-width, добавлен правый отступ для симметрии */
 .main-content {
     padding-left: 20px;
     padding-right: 40px;
@@ -61,7 +60,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Стили для кнопок more | links */
 .menu-bar {
     font-size: 14px;
     color: rgba(230, 237, 243, 0.4);
@@ -88,7 +86,6 @@ body {
     color: rgba(230, 237, 243, 0.3);
 }
 
-/* Стили выпадающих секций */
 .dropdown-section {
     display: none;
     margin-top: 15px;
@@ -99,7 +96,6 @@ body {
     display: block;
 }
 
-/* Горизонтальная линия под активной кнопкой */
 .dropdown-line {
     width: 100%;
     height: 1px;
@@ -111,9 +107,9 @@ body {
     font-size: 15px;
     color: rgba(230, 237, 243, 0.8);
     line-height: 1.5;
+    white-space: pre-line;
 }
 
-/* Вертикальный список ссылок */
 .social-links-vertical {
     display: flex;
     flex-direction: column;
