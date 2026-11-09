@@ -24,10 +24,10 @@ body {
     z-index: 1000;
 }
 
-.tech-top-right {
+.tech-top-left {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     padding: 10px;
     background-color: #0C161C;
     font-size: 14px;
@@ -37,6 +37,15 @@ body {
     pointer-events: none;
     z-index: 1000;
 }
+
+.cursor {
+    animation: blink 1s infinite steps(1);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+    }
 
 .main-content {
     padding-left: 20px;
